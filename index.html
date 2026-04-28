@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaZen - Trang chủ Chính Thức (P.P.R.T Update)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --navy-dark: #1e212b;
+            --gold: #f2c00c;
+            --cyan: #06b6d4;
+            --gray-light: #e5e5e5;
+            --gray-bg: #e0dede;
+            --text-dark: #333333;
+            --danger: #ef4444;
+            --bg-dark: #000000;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: var(--gold);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* HEADER */
+        .header-wrapper {
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .header .logo img {
+            height: 45px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--text-dark);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: inherit;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: var(--bg-dark);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 35px;
+            max-width: 480px;
+            line-height: 1.6;
+            color: #dddddd;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--text-dark);
+            padding: 12px 30px;
+            font-weight: 700;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-gold:hover {
+            opacity: 0.9;
+        }
+
+        /* GIỚI THIỆU */
+        .intro-section {
+            padding: 70px 0;
+            background: white;
+        }
+
+        .intro-section h2 {
+            font-size: 26px;
+            color: #a47355;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        /* PPRT SECTION (New) */
+        .pprt-section {
+            background: #fafafa;
+            padding: 70px 0;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .pprt-section h2 {
+            font-size: 28px;
+            color: var(--bg-dark);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .pprt-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .pprt-card {
+            background: white;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            position: relative;
+        }
+
+        .pprt-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--cyan);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .pprt-card h3 {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .pprt-card h4 {
+            color: var(--navy);
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .pprt-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+
+        /* SERVICES SECTION */
+        .services-section {
+            background: var(--bg-dark);
+            padding: 80px 0;
+        }
+
+        .services-section h2 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #111111;
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .service-card .img-box {
+            width: 220px;
+            flex-shrink: 0;
+            background: #222;
+        }
+
+        .service-card .content {
+            padding: 30px 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card h3 {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            color: #aaaaaa;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        /* QUY TRÌNH (TIMELINE) */
+        .timeline-section {
+            background: #dfdfdf;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .timeline-section h2 {
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: white;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+            z-index: 1;
+        }
+
+        .timeline-step {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+        }
+
+        .timeline-step:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-step:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-step::after {
+            content: attr(data-step);
+            position: absolute;
+            width: 34px;
+            height: 34px;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #aaa;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .timeline-step:nth-child(odd)::after {
+            right: -17px;
+        }
+
+        .timeline-step:nth-child(even)::after {
+            left: -17px;
+        }
+
+        .timeline-step.active::after {
+            background: var(--cyan);
+            border-color: var(--cyan);
+            color: white;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: var(--gold);
+            border-radius: 6px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-step:nth-child(even) .timeline-content {
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .timeline-content h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .timeline-step:nth-child(odd) .timeline-content h3 {
+            color: var(--text-dark);
+        }
+
+        .timeline-step:nth-child(even) .timeline-content h3 {
+            color: white;
+        }
+
+        .timeline-content p {
+            font-size: 11px;
+            margin: 0;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .timeline-step:nth-child(odd) .timeline-content p {
+            color: #444;
+        }
+
+        .timeline-step:nth-child(even) .timeline-content p {
+            color: #bbb;
+        }
+
+        /* ĐỘI NGŨ CHUYÊN GIA */
+        .team-section {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 26px;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .team-card {
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 15px;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .team-card h4 {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            font-size: 11px;
+            color: #777;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #dfdfdf;
+            padding: 80px 0;
+        }
+
+        .faq-section h2 {
+            font-size: 26px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .faq-wrapper {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .faq-image {
+            width: 350px;
+            height: 500px;
+            background: url('images/security_guard_patrol.png') center/cover;
+        }
+
+        .faq-content {
+            background: white;
+            width: 600px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #111;
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        .faq-item h4 {
+            font-size: 13px;
+            margin: 0;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+        }
+
+        .faq-item h4 span {
+            color: var(--gold);
+        }
+
+        .faq-item p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 0;
+            display: block;
+            line-height: 1.5;
+        }
+
+        /* LOGOS */
+        .logos-section {
+            padding: 50px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .logos-section h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .logos-flex {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logos-flex img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .member-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .member-section h3 {
+            font-size: 26px;
+            color: #baa076;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .member-flex {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .member-flex img {
+            height: 120px;
+        }
+
+        /* CONTACT & FOOTER */
+        .contact-section {
+            background: var(--gold);
+            padding: 50px 0 0 0;
+        }
+
+        .contact-section h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            flex: 1;
+            border-radius: 12px 12px 0 0;
+            margin-left: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+        }
+
+        .contact-form button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .contact-map {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .contact-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .footer {
+            background: var(--navy-dark);
+            color: #ccc;
+            padding: 50px 0 20px 0;
+            font-size: 12px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer h4 {
+            color: var(--gold);
+            font-size: 15px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer i {
+            color: var(--gold);
+            width: 20px;
+        }
+
+        .footer-copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Quản lý công việc &nbsp;|&nbsp; Ý kiến phản hồi &nbsp;|&nbsp; 0937 402 577 &nbsp;|&nbsp; Giải Việt Đà - Tranh
+        giải SeaZen Security
+    </div>
+
+    <div class="header-wrapper">
+        <div class="container header">
+            <div class="logo">
+                <img src="Logo SeaZen Expert/Logo_SeaZen_Expert_White_01.png" alt="SeaZen Logo">
+            </div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Về SeaZen</a>
+                <a href="#">Dịch vụ</a>
+                <a href="#">Giải pháp</a>
+                <a href="#">Trường đào tạo</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Tuyển dụng</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="container hero-inner">
+            <div>
+                <h1>SEAZEN<br><span>CHUYÊN GIA AN NINH</span></h1>
+                <p>Tư vấn giải pháp, cung cấp dịch vụ bảo vệ theo tiêu chuẩn An ninh toàn cầu, bán/cho thuê thiết bị,
+                    phần mềm An ninh – An toàn, PCCC.</p>
+                <a href="#" class="btn-gold">Đăng ký tư vấn</a>
+            </div>
+            <div style="width: 500px; height: 350px; display: flex; align-items:center; justify-content:flex-end;">
+                <img src="images/banner-right-seazen (1).png" alt="Banner Right SeaZen"
+                    style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+
+    <!-- GIỚI THIỆU -->
+    <div class="intro-section">
+        <div class="container">
+            <h2>GIỚI THIỆU</h2>
+            <div style="display: flex; gap: 40px; align-items: flex-start;">
+                <div style="flex: 1;">
+                    <iframe width="100%" height="340" src="https://www.youtube.com/embed/7JnW1b-5QgM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></iframe>
+                </div>
+                <div style="flex: 1; font-size: 14px; line-height: 1.8; color: var(--text-dark);">
+                    <p style="margin-top: 0;"><strong>Công ty Cổ phần Dịch vụ Bảo vệ SeaZen</strong> (tên cũ là Công ty
+                        Cổ phần Dịch vụ bảo vệ Sài Gòn – Đông Á) thành lập từ năm 2007, có đội ngũ chuyên gia An ninh
+                        dày dạn kinh nghiệm, nhất là lĩnh vực An ninh nhà máy/tòa nhà, sử dụng các tiêu chuẩn, thiết bị
+                        An ninh tiên tiến.</p>
+                    <p>Đội ngũ của SeaZen trực tiếp khảo sát, đánh giá thực trạng An ninh thực tế tại nhà máy/tòa nhà,
+                        so sánh với các tiêu chuẩn An ninh toàn cầu, được các tập đoàn đa quốc gia áp dụng, kết hợp với
+                        kinh nghiệm thực tiễn về môi trường An ninh tại Việt nam, từ đây Khách hàng của SeaZen sẽ nhận
+                        được bản báo cáo minh bạch về thực trạng An ninh – An toàn theo từng cấp độ rủi ro như AN hàng
+                        hóa, con người, ATLĐ, KL lao động, bạo lực tại nơi làm việc, đình công, bạo loạn, PCCC…</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: P.P.R.T MODEL -->
+    <div class="pprt-section">
+        <div class="container">
+            <h2>Mô Hình Vận Hành P.P.R.T</h2>
+            <p style="font-size: 15px; color: #666; max-width: 700px; margin: 0 auto;">Mô hình quản trị rủi ro khép kín
+                đột phá, cam kết tính minh bạch tuyệt đối và khả năng ứng phó các sự cố chuẩn SOP Quốc Tế.</p>
+
+            <div class="pprt-grid">
+                <div class="pprt-card">
+                    <h3>P</h3>
+                    <h4>Prevention (Phòng Ngừa)</h4>
+                    <p>Khảo sát rủi ro bằng tiêu chuẩn quốc tế. Cấp phát giải pháp chặn đứng nguy cơ từ vòng ngoài, ngăn
+                        chặn mọi thiệt hại.</p>
+                </div>
+                <div class="pprt-card">
+                    <h3>P</h3>
+                    <h4>Protection (Bảo Vệ)</h4>
+                    <p>Lực lượng chuyên gia an ninh hiện diện tại hiện trường. Thiết lập hàng rào bảo vệ vững chắc cho
+                        doanh nghiệp.</p>
+                </div>
+                <div class="pprt-card">
+                    <h3>R</h3>
+                    <h4>Response (Ứng Phó)</h4>
+                    <p>Hệ thống giám sát SOC trung tâm và Lực lượng cơ động (SRT) xuất kích nhanh giải quyết sự cố theo
+                        SLA cam kết.</p>
+                </div>
+                <div class="pprt-card">
+                    <h3>T</h3>
+                    <h4>Transparency (Minh Bạch)</h4>
+                    <p>100% tuân thủ BHXH, pháp lý lao động. Báo cáo bằng Dashboard với hệ thống Cost-breakdown rõ ràng
+                        không phí ẩn.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4 SERVICES SECTION ALIGNED TO PDF LAYOUT WIDTH -->
+    <div class="services-section">
+        <div class="container">
+            <h5 style="color:var(--gold); text-align:center; font-size:12px; margin-bottom:10px; letter-spacing:2px;">
+                GIẢI PHÁP AN NINH TÍCH HỢP</h5>
+            <h2>CUNG CẤP DỊCH VỤ AN NINH</h2>
+
+            <div class="services-grid">
+                <!-- 1 -->
+                <div class="service-card">
+                    <div class="img-box">
+                        <img src="images/ảnh1.jpeg" alt="Bảo vệ nhà máy"
+                            onerror="this.src='Logo SeaZen Expert/Logo_SeaZen_Expert_White_01.png';this.style.objectFit='contain';this.style.padding='20px';"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="content">
+                        <h3>1. An Ninh Cố Định</h3>
+                        <p>Giải pháp bảo vệ toàn diện cho: FDI Factories, Tòa nhà hạng A, Hệ thống Logistics & Retail.
+                            Triển khai chuẩn Audit Quốc tế.</p>
+                        <a href="service_01_an_ninh_co_dinh.html"
+                            style="color:var(--cyan); font-weight:700; font-size:11px; text-decoration:none;">TÌM HIỂU
+                            THÊM <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="service-card" style="border-left-color: var(--cyan);">
+                    <div class="img-box">
+                        <img src="images/CCTV.jpeg" alt="SOC"
+                            onerror="this.src='Logo SeaZen Expert/Logo_SeaZen_Expert_White_01.png';this.style.objectFit='contain';this.style.padding='20px';"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="content">
+                        <h3>2. Trung Tâm SOC</h3>
+                        <p>Khai thác trí tuệ nhân tạo AI Camera. Giám sát từ xa 24/7 trực tiếp từ trung tâm Operations
+                            SeaZen HQ.</p>
+                        <a href="service_02_trung_tam_soc.html"
+                            style="color:var(--cyan); font-weight:700; font-size:11px; text-decoration:none;">TÌM HIỂU
+                            THÊM <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="service-card" style="border-left-color: var(--danger);">
+                    <div class="img-box">
+                        <img src="images/security_guard_patrol.png" alt="SRT"
+                            onerror="this.src='Logo SeaZen Expert/Logo_SeaZen_Expert_White_01.png';this.style.objectFit='contain';this.style.padding='20px';"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="content">
+                        <h3>3. Phản Ứng Khẩn Cấp - SRT</h3>
+                        <p>Đội phản ứng nhanh tinh nhuệ. Giải quyết bạo loạn, xung đột đám đông và sự cố trong thời gian
+                            xuất kích cực ngắn.</p>
+                        <a href="service_03_phan_ung_srt.html"
+                            style="color:var(--cyan); font-weight:700; font-size:11px; text-decoration:none;">TÌM HIỂU
+                            THÊM <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="service-card" style="border-left-color: var(--gold);">
+                    <div class="img-box">
+                        <img src="images/security_guard_tablet.png" alt="Cận Vệ"
+                            onerror="this.src='Logo SeaZen Expert/Logo_SeaZen_Expert_White_01.png';this.style.objectFit='contain';this.style.padding='20px';"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="content">
+                        <h3>4. Cận Vệ Cao Cấp</h3>
+                        <p>Bảo vệ yếu nhân (VIP), giới tinh hoa, Tổng giám đốc tập đoàn. Đào tạo đặc biệt về võ thuật,
+                            lái xe và ngoại giao.</p>
+                        <a href="service_04_can_ve_cao_cap.html"
+                            style="color:var(--cyan); font-weight:700; font-size:11px; text-decoration:none;">TÌM HIỂU
+                            THÊM <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn-gold" style="background:var(--cyan); color:white;">ĐĂNG KÝ DỊCH VỤ &nbsp;<i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUY TRÌNH -->
+    <div class="timeline-section">
+        <div class="container">
+            <h2>QUY TRÌNH CUNG CẤP DỊCH VỤ</h2>
+            <div class="timeline">
+                <div class="timeline-step" data-step="1">
+                    <div class="timeline-content">
+                        <h3>GIỚI THIỆU VỀ SEAZEN</h3>
+                        <p>BGĐ/Sales/Marketing & đại diện khách hàng đến công ty tham quan hoặc thuyết trình dịch vụ.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-step active" data-step="2">
+                    <div class="timeline-content">
+                        <h3>KHẢO SÁT SƠ BỘ & ĐỀ XUẤT</h3>
+                        <p>Khảo sát, đánh giá tình trạng an ninh hiện tại của nhà máy, so sánh rủi ro cần xử lý.</p>
+                    </div>
+                </div>
+                <div class="timeline-step" data-step="3">
+                    <div class="timeline-content">
+                        <h3>TRÌNH BÀY ĐỀ XUẤT DỊCH VỤ</h3>
+                        <p>Trình bày cảnh báo nguy cơ AN, tư vấn giải pháp toàn diện và điều khoản hợp đồng.</p>
+                    </div>
+                </div>
+                <div class="timeline-step active" data-step="4">
+                    <div class="timeline-content">
+                        <h3>KHÁCH HÀNG XÁC NHẬN</h3>
+                        <p>Ký kết văn bản điện tử xác nhận biểu phí và hợp đồng, không xài lời nói định tính.</p>
+                    </div>
+                </div>
+                <div class="timeline-step" data-step="5">
+                    <div class="timeline-content">
+                        <h3>MÔ TẢ CHI TIẾT TỪNG VỊ TRÍ</h3>
+                        <p>Bóc tách rủi ro cho mỗi vị trí chốt gác gác, yêu cầu SOP nghiệp vụ.</p>
+                    </div>
+                </div>
+                <div class="timeline-step active" data-step="6">
+                    <div class="timeline-content">
+                        <h3>TUYỂN DỤNG VÀ BỐ TRÍ</h3>
+                        <p>Sàng lọc nhân sự, đưa tổ đội tinh nhuệ triển khai dự án mới theo lịch trình.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ĐỘI NGŨ -->
+    <div class="team-section">
+        <div class="container">
+            <h2>Đội Ngũ Chuyên Gia</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="images/security_guard_patrol.png" alt="Bà Huỳnh Đoan Tố Thư">
+                    <h4>Bà Huỳnh Đoan Tố Thư</h4>
+                    <p>Giám Đốc An Ninh Tại Esquel Garment Manufacturing</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/security_guard_tablet.png" alt="Ông Nguyễn Văn Nghệ">
+                    <h4>Ông Nguyễn Văn Nghệ</h4>
+                    <p>Thượng Úy CA 24 Năm Quản Lý Bảo Vệ Cấp Cao</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/CCTV.jpeg" alt="Ông Nguyễn Trọng Anh">
+                    <h4>Ông Nguyễn Trọng Anh</h4>
+                    <p>Trung Tá, nguyên Đội trưởng điều tra</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/ảnh1.jpeg" alt="Ông Nguyễn Tuấn Chung">
+                    <h4>Ông Nguyễn Tuấn Chung</h4>
+                    <p>Đại Tá trưởng khoa, ĐH Cảnh sát Nhân Dân</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <div class="container">
+            <h2>MỘT SỐ CÂU HỎI THƯỜNG GẶP</h2>
+            <div class="faq-wrapper">
+                <div class="faq-image"></div>
+                <div class="faq-content">
+                    <div class="faq-item">
+                        <h4>1. SeaZen có quy mô hoạt động như thế nào? <span>-</span></h4>
+                        <p>Chúng tôi hoạt động khắp cả nước Việt Nam và có văn phòng trải dài từ Nam ra Bắc: Hồ Chí
+                            Minh, Đồng Nai, Bình Dương, Hà Nội. Ở đâu có rủi ro, ở đó có SeaZen.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>2. Thủ tục tiến hành thuê dịch vụ như thế nào? <span>+</span></h4>
+                    </div>
+                    <div class="faq-item">
+                        <h4>3. Quy trình triển khai dịch vụ của SeaZen? <span>+</span></h4>
+                    </div>
+                    <div class="faq-item">
+                        <h4>4. Làm sao để nhận báo giá chi tiết nhất? <span>+</span></h4>
+                    </div>
+                    <div class="faq-item">
+                        <h4>5. Độ tuổi trung bình của đội ngũ là bao nhiêu? <span>+</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGOS & MEMBER -->
+    <div class="logos-section">
+        <div class="container">
+            <h2>KHÁCH HÀNG TIÊU BIỂU</h2>
+            <div class="logos-flex">
+                <i class="fa-solid fa-chevron-left" style="color: #ccc; cursor: pointer;"></i>
+                <div style="font-size:24px; font-weight:900; color:var(--navy); font-style:italic;">PEPSICO</div>
+                <div style="font-size:24px; font-weight:900; color:var(--navy); font-style:italic;">Unilever</div>
+                <div style="font-size:24px; font-weight:900; color:#e00; font-style:italic;">Mondelez</div>
+                <div style="font-size:24px; font-weight:900; color:#00f; font-style:italic;">COATS</div>
+                <div
+                    style="font-size:24px; font-weight:900; color:#d00; background:#fc0; padding: 5px 15px; font-style:italic;">
+                    DHL</div>
+                <i class="fa-solid fa-chevron-right" style="color: #ccc; cursor: pointer;"></i>
+            </div>
+
+            <!-- Thành Viên -->
+            <div class="member-section">
+                <h3>THÀNH VIÊN <span style="color: var(--navy);">SEAZEN</span></h3>
+                <div class="member-flex">
+                    <div style="width: 150px; text-align: center;">
+                        <i class="fa-solid fa-shield-halved"
+                            style="font-size: 60px; color: var(--navy); margin-bottom: 10px;"></i>
+                        <div style="font-weight:800; font-size:12px;">SEAZEN TECHNOLOGY</div>
+                    </div>
+                    <div style="width: 150px; text-align: center;">
+                        <i class="fa-solid fa-shield-cat"
+                            style="font-size: 80px; color: var(--navy); margin-bottom: 10px;"></i>
+                        <div style="font-weight:800; font-size:14px;">CHUYÊN GIA AN NINH</div>
+                    </div>
+                    <div style="width: 150px; text-align: center;">
+                        <i class="fa-solid fa-user-graduate"
+                            style="font-size: 60px; color: var(--navy); margin-bottom: 10px;"></i>
+                        <div style="font-weight:800; font-size:12px;">TRƯỜNG ĐÀO TẠO <br> AN NINH BẢO VỆ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIÊN LẠC & BẢN ĐỒ -->
+    <div class="contact-section">
+        <div class="container">
+            <h2>LIÊN LẠC VỚI CHÚNG TÔI</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <label style="font-size:12px; font-weight:700; display:block; margin-bottom:5px;">Họ và tên
+                        *</label>
+                    <input type="text" placeholder="Nhập tên của bạn">
+
+                    <label style="font-size:12px; font-weight:700; display:block; margin-bottom:5px;">Số điện thoại
+                        *</label>
+                    <input type="text" placeholder="Nhập số điện thoại">
+
+                    <label style="font-size:12px; font-weight:700; display:block; margin-bottom:5px;">Email của
+                        bạn</label>
+                    <input type="email" placeholder="Nhập Email liên hệ">
+
+                    <label style="font-size:12px; font-weight:700; display:block; margin-bottom:5px;">Yêu cầu của
+                        bạn</label>
+                    <textarea rows="4" placeholder="Để lại yêu cầu..."></textarea>
+
+                    <button>Gửi đi</button>
+                </div>
+                <div class="contact-map">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80"
+                        alt="Map Placeholder">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="Logo SeaZen Expert/Logo_SeaZen_Expert_Black_01.png" alt="SeaZen Logo">
+                    </div>
+                    <p>SeaZen tập trung mọi nguồn lực, phấn đấu trở thành Chuyên Gia số 1 trong lĩnh vực cung cấp các
+                        giải pháp An ninh tổng thể nhà máy, tòa nhà tại Việt Nam.</p>
+                    <p>Bảo mật thông tin khách hàng<br>Thông tin về chủ sở hữu website<br>Chính sách bảo hành và đổi trả
+                    </p>
+                </div>
+                <div>
+                    <h4>Công ty CP Dịch Vụ Bảo Vệ SeaZen</h4>
+                    <p>Giấy phép hoạt động: 3600898567</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Địa chỉ: 15/16, Đường 37, Khu Phố 7, Phường Hiệp Bình,
+                        TP Thủ Đức, HCM.</p>
+
+                    <h4 style="margin-top: 20px;">Trụ sở chính: Hồ Chí Minh</h4>
+                    <p><i class="fa-solid fa-phone"></i> 0937.402.577 - (028) 22.538.539</p>
+                    <p><i class="fa-solid fa-envelope"></i> customercare@seazen.vn</p>
+                </div>
+                <div>
+                    <h4>Văn phòng đại diện Đồng Nai</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Số 062, Tổ 2, KP.3, P. Long Bình Tân, TP. Biên Hòa, Đồng
+                        Nai.</p>
+
+                    <h4 style="margin-top: 20px;">Văn phòng đại diện Bình Dương</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Số 34/4, Phường An Phú, Thuận An, Bình Dương.</p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                COPYRIGHT © 2018-2026. ALL RIGHTS RESERVED. DESIGNED BY SEAZEN.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

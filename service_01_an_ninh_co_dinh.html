@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ An Ninh Cố Định - SeaZen Security</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --navy-dark: #1e212b;
+            --gold: #f2c00c;
+            --cyan: #06b6d4;
+            --gray-light: #f8fafc;
+            --text-dark: #333333;
+            --primary: #0284c7;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* HEADER */
+        .top-bar {
+            background: var(--gold);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .header-wrapper {
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .header .logo img {
+            height: 45px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--text-dark);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: inherit;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: var(--navy);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+
+        /* HERO - LIGHT THEME */
+        .hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 80px 0;
+            border-bottom: 1px solid #bae6fd;
+        }
+
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h5 {
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .hero-img {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-img img {
+            width: 100%;
+            display: block;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 14px 35px;
+            font-weight: 700;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.2);
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(2, 132, 199, 0.3);
+        }
+
+        /* BENEFITS */
+        .benefits {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .benefits h2 {
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 50px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-card {
+            padding: 40px 30px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .benefit-card:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* LEAD FORM SECTION */
+        .lead-section {
+            padding: 80px 0;
+            background: var(--navy);
+            color: white;
+        }
+
+        .lead-inner {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .lead-info {
+            flex: 1;
+        }
+
+        .lead-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .lead-info p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .lead-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lead-info li {
+            margin-bottom: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead-info li i {
+            color: var(--cyan);
+        }
+
+        .lead-form-box {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            color: var(--text-dark);
+        }
+
+        .lead-form-box h3 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--navy);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: 'Open Sans';
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 800;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background: #d4a008;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--navy-dark);
+            color: #ccc;
+            padding: 50px 0 20px 0;
+            font-size: 12px;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer h4 {
+            color: var(--gold);
+            font-size: 15px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer-copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            .hero-inner,
+            .lead-inner {
+                flex-direction: column;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Quản lý công việc &nbsp;|&nbsp; Ý kiến phản hồi &nbsp;|&nbsp; 0937 402 577 &nbsp;|&nbsp; Giải Việt Đà - Tranh
+        giải SeaZen Security
+    </div>
+
+    <div class="header-wrapper">
+        <div class="container header">
+            <div class="logo">
+                <img src="Logo SeaZen Expert/Logo_SeaZen_Expert_White_01.png" alt="SeaZen Logo">
+            </div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">Về SeaZen</a>
+                <a href="#">Dịch vụ</a>
+                <a href="#">Giải pháp</a>
+                <a href="#">Trường đào tạo</a>
+                <a href="#">Tin tức</a>
+                <a href="#">Tuyển dụng</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h5>Giải Pháp An Ninh Tích Hợp P.P.R.T</h5>
+                <h1>BẢO VỆ MỤC TIÊU CỐ ĐỊNH CHUẨN QUỐC TẾ</h1>
+                <p>Khảo sát rủi ro MIỄN PHÍ. Chúng tôi bảo vệ hệ sinh thái gồm Nhà máy FDI, Tòa nhà hạng A và Doanh
+                    nghiệp phân phối bằng tiêu chuẩn quốc tế ISO và C-TPAT, bảo vệ trọn vẹn rủi ro nhân sự lẫn tài sản.
+                </p>
+                <a href="#quote" class="btn-primary">Nhận Lịch Khảo Sát Tận Nơi</a>
+            </div>
+            <div class="hero-img">
+                <img src="images/ảnh1.jpeg" alt="An Ninh Cố định SeaZen">
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- SEO & VIDEO SECTION -->
+    <div class="seo-section" style="padding: 60px 0; background: #fafafa; border-top: 1px solid #eaeaea;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 50px;">
+                <h2 style="font-size: 32px; color: var(--navy); margin-bottom: 25px;">I. Xu hướng An ninh AI SOC trong thời đại số</h2>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <iframe src="https://www.youtube.com/embed/7JnW1b-5QgM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 14px; color: #666; margin-top: 15px; font-style: italic;">Video: Khám Phá Sức Mạnh Trung Tâm SOC SeaZen HQ</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: #444;">
+                <h3 style="font-size: 20px; color: #16a34a; margin-top: 30px;">1. Bất cập của mô hình bảo vệ đi tuần vật lý ban đêm</h3>
+                <p>Trong một nhà máy rộng hàng hecta hoặc kho Logistics khổng lồ, việc chỉ dựa vào nhân sự bảo vệ đi tuần quanh các góc khuất vào 1-2h sáng tiềm ẩn vô vàn sơ hở. Con người dễ mệt mỏi, mờ mắt hoặc cố tình bỏ qua khu vực vòng ngoài khiến tài sản bị thất thoát.</p>
+                <p>Chi phí để duy trì hàng chục chốt trực tạo gánh nặng lớn cho vận hành doanh nghiệp.</p>
+                
+                <img src="images/CCTV.jpeg" alt="Giám sát SOC SeaZen" style="width: 100%; border-radius: 8px; margin: 30px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+
+                <h3 style="font-size: 20px; color: #16a34a; margin-top: 30px;">2. Giải pháp chuyển đổi số phân tích hình ảnh (Deep Learning)</h3>
+                <p>Trung tâm SOC của SeaZen kết nối thẳng camera có sẵn của khách hàng tới AI Edge. Trí tuệ nhân tạo sẽ soi chiếu liên tục để vẽ "vùng cấm", đếm lượt ra vào hay phát giác kẻ gian xâm nhập đường rào.</p>
+                <p>Khi có đột nhập, AI phát tín hiệu cảnh báo trong 2 giây lên tổng đài SeaZen. Quản lý trực SOC phát loa đàm thoại hai chiều chặn đứng tên trộm.</p>
+
+                <h3 style="font-size: 20px; color: #16a34a; margin-top: 30px;">3. "Máy móc thay con người" tối ưu lợi nhuận</h3>
+                <p>Áp dụng hệ sinh thái SOC giúp Khách hàng giảm tới 40-50% quân số bảo vệ cơ sở. Máy móc giám sát không nháy mắt, còn con người tiếp nhận và phán đoán tính huống tạo nên tường lửa AI hoàn hảo mang độ chính xác 100%.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- BENEFITS -->
+    <div class="benefits">
+        <div class="container">
+            <h2>Vì Sao Khách Hàng Doanh Nghiệp Chọn SeaZen?</h2>
+            <div class="grid-3">
+                <div class="benefit-card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Tuân Thủ ESG & Audit</h3>
+                    <p>Khảo sát và thực thi an ninh đáp ứng hoàn hảo các khung kiểm định quốc tế của tập đoàn mẹ (ISO
+                        28000, C-TPAT, Compliance).</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                    <h3>Cam Kết Minh Bạch 100%</h3>
+                    <p>Không phí ẩn, không cắt xén chất lượng. Tuân thủ BHXH, pháp lý lao động đầy đủ giúp rủi ro pháp
+                        lý của doanh nghiệp bằng không.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Hệ Sinh Thái Phản Ứng SRT</h3>
+                    <p>Đội cơ động SRT xử lý khẩn cấp sự cố cháy nổ, đình công trong thời gian xuất kích cực ngắn dưới
+                        sự hỗ trợ từ AI SOC.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEAD FORM -->
+    <div class="lead-section" id="quote">
+        <div class="container lead-inner">
+            <div class="lead-info">
+                <h2>Báo Giá Rõ Ràng. <br>Cam Kết Chất Lượng.</h2>
+                <p>Hãy để chuyên gia An ninh của SeaZen đánh giá trực tiếp lỗ hổng an ninh tại quỹ đất của bạn và phác
+                    thảo ngay bản kế hoạch P.P.R.T chống rủi ro hoàn hảo.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check-circle"></i> Khảo sát mục tiêu miễn phí trong 24h.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Xây dựng mô hình 3D báo cáo rủi ro.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Cam kết SLA bằng văn bản pháp lý.</li>
+                </ul>
+            </div>
+            <div class="lead-form-box">
+                <h3>Đăng Ký Tư Vấn Giải Pháp</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <label>Tên Doanh Nghiệp / Cơ quan *</label>
+                        <input type="text" placeholder="Ví dụ: Công ty TNHH ...">
+                    </div>
+                    <div class="form-group">
+                        <label>Số điện thoại liên hệ *</label>
+                        <input type="tel" placeholder="Nhập SĐT để chuyên gia gọi lại">
+                    </div>
+                    <div class="form-group">
+                        <label>Loại Mục Tiêu Cần Bảo Vệ</label>
+                        <select>
+                            <option>Nhà máy / Khu công nghiệp FDI</option>
+                            <option>Tòa nhà Hạng A / TTTM</option>
+                            <option>Khu Dân cư / Đô thị cao cấp</option>
+                            <option>Kho vận / Logistics</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-submit">YÊU CẦU BÁO GIÁ NGAY</button>
+                    <p style="font-size:11px; color:#888; text-align:center; margin-top:15px; margin-bottom:0;">Thông
+                        tin của bạn được bảo mật tuyệt đối.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="Logo SeaZen Expert/Logo_SeaZen_Expert_Black_01.png" alt="SeaZen Logo">
+                    </div>
+                    <p>SeaZen tập trung mọi nguồn lực, phấn đấu trở thành Chuyên Gia số 1 trong lĩnh vực cung cấp các
+                        giải pháp An ninh tổng thể nhà máy, tòa nhà tại Việt Nam.</p>
+                    <p>Bảo mật thông tin khách hàng<br>Thông tin về chủ sở hữu website<br>Chính sách bảo hành và đổi trả
+                    </p>
+                </div>
+                <div>
+                    <h4>Công ty CP Dịch Vụ Bảo Vệ SeaZen</h4>
+                    <p>Giấy phép hoạt động: 3600898567</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Địa chỉ: 15/16, Đường 37, Khu Phố 7, Phường Hiệp Bình,
+                        TP Thủ Đức, HCM.</p>
+
+                    <h4 style="margin-top: 20px;">Trụ sở chính: Hồ Chí Minh</h4>
+                    <p><i class="fa-solid fa-phone"></i> 0937.402.577 - (028) 22.538.539</p>
+                    <p><i class="fa-solid fa-envelope"></i> customercare@seazen.vn</p>
+                </div>
+                <div>
+                    <h4>Văn phòng đại diện Đồng Nai</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Số 062, Tổ 2, KP.3, P. Long Bình Tân, TP. Biên Hòa, Đồng
+                        Nai.</p>
+
+                    <h4 style="margin-top: 20px;">Văn phòng đại diện Bình Dương</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Số 34/4, Phường An Phú, Thuận An, Bình Dương.</p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                COPYRIGHT © 2018-2026. ALL RIGHTS RESERVED. DESIGNED BY SEAZEN.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
